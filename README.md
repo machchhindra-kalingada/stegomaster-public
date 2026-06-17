@@ -1,19 +1,10 @@
-<div align="center">
+﻿<div align="center">
 
 <br/>
 
-```
-███████╗████████╗███████╗ ██████╗  ██████╗ ███╗   ███╗ █████╗ ███████╗████████╗███████╗██████╗
-██╔════╝╚══██╔══╝██╔════╝██╔════╝ ██╔═══██╗████╗ ████║██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗
-███████╗   ██║   █████╗  ██║  ███╗██║   ██║██╔████╔██║███████║███████╗   ██║   █████╗  ██████╔╝
-╚════██║   ██║   ██╔══╝  ██║   ██║██║   ██║██║╚██╔╝██║██╔══██║╚════██║   ██║   ██╔══╝  ██╔══██╗
-███████║   ██║   ███████╗╚██████╔╝╚██████╔╝██║ ╚═╝ ██║██║  ██║███████║   ██║   ███████╗██║  ██║
-╚══════╝   ╚═╝   ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝
-```
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=42&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&height=100&lines=StegoMaster;Hide+Anything.;Inside+Anything.;Leave+No+Trace.)](https://stegomaster.in)
 
-### *Hide Anything. Inside Anything. Leave No Trace.*
 
-<br/>
 
 [![Status](https://img.shields.io/badge/Status-Live-brightgreen?style=for-the-badge)](https://stegomaster.in)
 [![Version](https://img.shields.io/badge/Version-18.0-5865F2?style=for-the-badge)](https://stegomaster.in)
