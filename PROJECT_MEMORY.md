@@ -1,5 +1,5 @@
 # StegoMaster — Project Memory
-Last updated: June 2026
+Last updated: June 24, 2026
 Developers: Machchhindra Kalingada + Mrunmayee
 
 ## Quick Start (New Developer)
@@ -74,7 +74,53 @@ Resolution is UNCHANGED — output is byte-identical quality, not resampled.
 - **float32 throughout**: cost values only need relative ranking, halves memory vs float64
 - **blended_cost_ultimate_auto**: <=20MP direct (faster), >20MP tiled (memory-safe)
 
-## Web Status — PARTIAL
+## Web Status -- COMPLETE (CLI Parity Achieved)
+
+Last updated: June 24, 2026. All CLI features now available in Web app.
+
+### All Bugs Fixed
+| Bug | Fix |
+|-----|-----|
+| W1 | Crypto wire-format compatibility |
+| W2 | Full engine sync (HILL/WOW/MiPOD now real) |
+| W3 | Batch processing /api/batch-hide implemented |
+| W4 | validate_password_strength now called in api_hide |
+| W5 | audioop-lts safe |
+| W6 | Specific ValueError/MemoryError/OSError handlers (no more swallowed errors) |
+| W7 | Free tier PNG+text only, both api_hide AND api_extract gated |
+| W8 | False "9MP auto-resize" claim removed |
+| W9 | channel_timeout 120s -> 300s |
+
+### CLI Features Implemented in Web
+| Feature | Status |
+|---------|--------|
+| PNG/JPEG/Audio/Video/PDF/DOCX/ODT carriers | DONE |
+| Deniable Encryption | DONE -- /api/hide-deniable + UI tab |
+| Self-Expiring Messages | DONE -- expires param + Advanced options UI |
+| Self-Destruct Messages | DONE -- self_destruct param + Advanced options UI |
+| Batch Processing | DONE -- /api/batch-hide + Batch UI tab |
+| Steganalysis (7 detectors) | DONE -- /api/analyze + Analyze UI tab |
+| Capacity Estimation | DONE -- /api/capacity + Capacity UI tab |
+| Genkey (password generator) | DONE -- /api/genkey + Genkey UI tab |
+| JPEG proper engine | DONE -- jpeg.py (was wrongly using png.py) |
+
+### Web UI Tabs (order)
+Hide | Extract | Genkey | Batch (PRO) | Capacity | Analyze | Deniable (PRO)
+
+### Engine State
+byte-for-byte CLI-identical EXCEPT crypto.py (intentional), main.py, web_app.py.
+All costs/ and formats/ files synced to CLI commit 3a720fb.
+
+### Web Commits (June 24, 2026)
+- 32c2344 -- fix: W6 except handlers, W9 timeout, JS bugs, false claims + CLI sync
+- 4cd6f06 -- feat: Batch UI frontend
+- 73068b2 -- feat: ODT carrier support
+- 1e0ec62 -- feat: Deniable encryption
+- ee9b728 -- feat: Expiry messages + self-destruct
+- 74b171f -- feat: JPEG proper embed/extract
+- d0df277 -- feat: Steganalysis UI
+- 56937b4 -- feat: Capacity estimation UI
+- 3aab867 -- feat: Genkey UI
 
 Fixed: W1 (crypto wire-format), W2 (engine sync), W3 (batch processing),
        W4 (password validation), W5 (audioop), W7 (free tier PNG+text only)
@@ -96,18 +142,11 @@ Engine: byte-for-byte CLI-identical EXCEPT:
 | W9 | channel_timeout=120s too short for large files | MEDIUM |
 | W10-W18 | Various UX/security improvements | LOW |
 
-## Pending Work (Priority Order)
-1. Web engine re-sync (costs/ + png.py + __init__.py to Web repo)
-2. Re-verify Web via Flask test client (embed+extract round-trip)
-3. W6 fix (generic except Exception in app.py)
-4. W8 fix (9MP claim — auto-fixed after syncing png.py)
-5. W9 fix (channel_timeout increase in run_production.py)
-6. Batch UI frontend (backend /api/batch-hide already done)
-7. W10-W18 (low priority UX/security)
-8. Hostinger VPS deployment (migrate from Railway)
-9. Facebook feature posts
-10. BENCHMARKS.md update with new measured numbers
-11. README update for public repo
+## Pending Work
+1. pricing.html tier update
+2. Hostinger VPS deployment (migrate from Railway)
+3. Facebook feature posts
+4. stegomaster-public README update
 
 ## Recurring Technical Gotchas
 These caused problems multiple times — know them before touching code:
