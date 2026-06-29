@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
 
 <br/>
 
@@ -260,12 +260,17 @@ StegoMaster has been validated against **7 standard detection methods**:
 
 |  | 🆓 **Free** | ⚡ **Pro** |
 |--|:-----------:|:---------:|
-| **Price** | **₹0** forever | **₹99** / month |
-| All formats | ✅ | ✅ |
-| Text hiding | ✅ | ✅ |
-| AES-256 encryption | ✅ | ✅ |
-| File size limit | 25 MB | **100 MB** |
+| **Price** | **₹0** forever | **₹199** / month |
+| PNG carrier only | ✅ | ✅ All formats |
+| Text hiding (10 chars max) | ✅ | ✅ Unlimited |
+| AES-256-GCM encryption | ✅ | ✅ |
+| File size limit | 15 MB | **100 MB** |
 | **File-in-file hiding** | ❌ | ✅ |
+| **Self-destruct links** | ❌ | ✅ |
+| **Message expiry** | ❌ | ✅ |
+| **Deniable encryption** | ❌ | ✅ |
+| **Batch processing** | ❌ | ✅ |
+| **Genkey / Capacity / Analyze tools** | ❌ | ✅ |
 | **Commercial use** | ❌ | ✅ |
 | **Priority support** | ❌ | ✅ |
 | | [**Start Free →**](https://stegomaster.in) | [**Upgrade →**](https://stegomaster.in/pricing) |
